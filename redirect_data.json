@@ -1,0 +1,8 @@
+{
+    "base_redirect": "https://",
+    "empty_url": "profile.withjannis.dev",
+    "redirects": {
+        "github": "github.com/withjannis",
+        "twitter": "twitter.com/withjannis"
+    }
+}
