@@ -19,9 +19,13 @@ function cleanPath(path){
 
 //decide where to redirect
 function evalRedirect(host, path){
-  console.log("evaluating redirect")
+  let date = new Date()
+  console.log("evaluating redirect at", date)
+
+  //clena data
   host = cleanHost(host)
   path = cleanPath(path)
+
   console.log(host)
   console.log(path)
   if(data.redirects[host]){ //priority to host
@@ -37,6 +41,7 @@ function evalRedirect(host, path){
 app.get("*", (req, res) => {
   //console.log(req)
   redirect_location = evalRedirect(req.headers.host, req.path)
+  console.log("redirecting to", redirect_location)
   res.redirect(301, redirect_location);
 });
 
