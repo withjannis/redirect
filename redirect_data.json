@@ -2,7 +2,11 @@
     "base_redirect": "https://",
     "empty_url": "profile.withjannis.dev",
     "redirects": {
-        "github": "github.com/withjannis",
-        "twitter": "twitter.com/withjannis"
+        "/": "profile.withjannis.dev"
+        ,"github": "github.com/withjannis"
+        ,"twitter": "twitter.com/withjannis"
+        ,"instagram": "instagram.com/withjannis"
+        ,"linkedin": "linkedin.com/in/jannisimhof"
+        ,"tree": "withjannis.dev/tree"
     }
 }

@@ -5,6 +5,8 @@ const port = 12701;
 const data = require("./redirect_data.json");
 //console.log(data.redirects)
 
+app.use(express.static(__dirname + '/content/public'));
+
 //clean host from header data
 function cleanHost(host){
   console.log("cleaning host", host)
@@ -37,8 +39,15 @@ function evalRedirect(host, path){
   }
 }
 
+app.get("/tree", (req, res) => {
+  //console.log(req)
+  console.log("accessed to link tree")
+  res.sendFile(__dirname + '/content/index.html');
+});
+
 //catch all
-app.get("*", (req, res) => {
+console.log(Object.keys(data.redirects))
+app.get(Object.keys(data.redirects), (req, res) => {
   //console.log(req)
   redirect_location = evalRedirect(req.headers.host, req.path)
   console.log("redirecting to", redirect_location)

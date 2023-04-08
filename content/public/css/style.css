@@ -1,0 +1,11 @@
+body {
+    background: #000000;
+    color: #ffffff;
+    font-family: consolas, "courier new", courier, monospace;
+}
+
+a {
+    font-size: large;
+    text-decoration: none;
+    color: #ffffff;
+}
