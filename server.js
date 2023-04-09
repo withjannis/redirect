@@ -46,8 +46,7 @@ app.get("/tree", (req, res) => {
 });
 
 //catch all
-console.log(Object.keys(data.redirects))
-app.get(Object.keys(data.redirects), (req, res) => {
+app.get("*", (req, res) => {
   //console.log(req)
   redirect_location = evalRedirect(req.headers.host, req.path)
   console.log("redirecting to", redirect_location)
